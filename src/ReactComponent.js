@@ -10,31 +10,33 @@ import ActionHistory from 'material-ui/svg-icons/action/history';
 import ActionTimeLine from 'material-ui/svg-icons/action/timeline';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import NewWindow from 'react-new-window'
 
+
+
+
 export default class ReactComponent extends React.Component {
+
 
   constructor(props) {
     super(props);
+    this.stringDB = "";
     this.state = {open: false};
+
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  
+	
 
-
-
+ handleToggle = () => this.setState({open: !this.state.open});
 
 
   render() {
     return (
 
       <div>
-	  <NewWindow>
-	    <h1>Hi </h1>
-	  </NewWindow>      
 	  <AppBar
 	    title="HouseControl"
 	    iconElementLeft ={<IconButton onClick={this.handleToggle}><NavgationMore /></IconButton>}	    
